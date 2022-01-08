@@ -7,9 +7,25 @@
   text-decoration: none;
 }
 
-body {
+body,
+html {
+  margin: 0;
   font-size: 100%;
   background: linear-gradient(to bottom right, #0055ff 0%, #66757f 100%);
+  background-size: 100%;
+  /*background-image: (fundo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;*/
+}
+
+.imagem-fundo {
+  background-image: url("fundo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .cabecalho {
@@ -69,6 +85,14 @@ body {
   color: bisque;
 }
 
+.conteudo-principa-escrito-subititulo-referencia {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 10px;
+  color: bisque;
+  
+}
+
 .conteudo-principal-escrito-botao {
   background-color: bisque;
   width: 100px;
@@ -88,7 +112,7 @@ body {
 }
 
 .conteudo-principal-imagem {
-  height: 400px;
+  height: 300px;
 }
 
 .conteudo-secundario {
@@ -121,7 +145,7 @@ body {
 }
 
 .rodape-imagem {
-  height: 48px;
+  height: 200px;
   display: block;
   margin: 0 auto;
 }
