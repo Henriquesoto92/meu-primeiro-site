@@ -8,12 +8,19 @@
 }
 
 body,
-html {
-  background-image: url("fundo.png");
-  background-repeat: no-repeat;
+html,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.imagem-fundo {
+  background: url("../fundo.png") no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+
+  height: 100vh;
+  width: 100%;
 }
 
 .cabecalho {
@@ -127,12 +134,52 @@ html {
 }
 
 .rodape {
+  height: 17rem;
+
   padding: 2rem;
   border-top: 1px solid bisque;
+  background: none;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rodape::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+
+  z-index: -2;
+
+  background: linear-gradient(black, rgba(200, 200, 200, 0.4)),
+    url("../fundo.png") no-repeat center;
+}
+
+.rodape::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+
+  background: black;
+  filter: opacity(0.8);
 }
 
 .rodape-imagem {
   height: 12.5rem;
   display: block;
   margin: 0 auto;
+
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.25);
 }
