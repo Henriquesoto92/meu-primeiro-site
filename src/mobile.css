@@ -1,16 +1,33 @@
 @media only screen and (max-width: 1100px) {
+  .conteudo-principal {
+    flex-direction: column;
+    gap: 5rem;
+    padding: 3rem 5rem;
+  }
+
+  .imagem-fundo {
+    height: 150vh;
+  }
+
+  .conteudo-secundario {
+    padding: 0 5rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
   html {
     font-size: 14px;
   }
 }
-@media only screen and (max-width: 1000px) {
+
+@media only screen and (max-width: 400px) {
   html {
     font-size: 12px;
   }
 }
 
-@media only screen and (max-width: 850px) {
+/* @media only screen and (max-width: 850px) {
   html {
     font-size: 10px;
   }
-}
+} */
