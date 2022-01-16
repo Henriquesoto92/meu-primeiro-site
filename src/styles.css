@@ -159,6 +159,8 @@ html,
 
   background: linear-gradient(black, rgba(200, 200, 200, 0.4)),
     url("../fundo.png") no-repeat center;
+
+  background-size: cover;
 }
 
 .rodape::before {
