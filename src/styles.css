@@ -9,7 +9,7 @@
 
 body,
 html {
-  background-image: url("fundo.png") ;
+  background-image: url("./fundo.png") ;
   background-color: rgba(0,0,0,50);
   background-repeat: no-repeat;
   background-size: cover;
