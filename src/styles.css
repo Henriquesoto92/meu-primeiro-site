@@ -8,14 +8,19 @@
 }
 
 body,
-html {
-  background-image: url("./fundo.png") ;
-  background-color: rgba(0,0,0,50);
-  background-repeat: no-repeat;
+html,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+.imagem-fundo {
+  background: linear-gradient(rgb(46, 45, 45, 0.8), rgba(0, 0, 0, 0.2)), 
+  url("../fundo.png") no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 
+  height: 100vh;
+  width: 100%;
 }
 
 .cabecalho {
@@ -41,22 +46,25 @@ html {
   color: bisque;
   font-weight: 500;
   font-size: 1.125rem;
+  justify-content: space-around;
 }
 
 .conteudo {
   margin-bottom: 3rem;
+  align-items: center;
   border-top: 2px solid bisque;
 }
 
 .conteudo-principal {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
 
 .conteudo-principal-escrito {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 2rem;
 }
@@ -100,9 +108,16 @@ html {
   color: cyan;
 }
 
-.conteudo-principal-imagem {
+.video {
+  position: relative ;
+  width: 100%;
+  padding-bottom: 1%;
   height: 18.75rem;
 }
+
+/*.conteudo-principal-imagem {
+  height: 18.75rem;
+}*/
 
 .conteudo-secundario {
   display: flex;
