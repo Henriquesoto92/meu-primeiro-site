@@ -12,15 +12,15 @@ html,
 #root {
   height: 100%;
   width: 100%;
+  padding: 0;
+  margin: 0;
   font-family: "Roboto", sans-serif;
 }
-.imagem-fundo {
-  background: linear-gradient(rgb(46, 45, 45, 0.8), rgba(0, 0, 0, 0.2)), 
-  url("../fundo.png") no-repeat center center fixed;
-  background-size: cover;
 
-  height: 100vh;
-  width: 100%;
+.imagem-fundo {
+  background: linear-gradient(to right, rgb(46, 45, 45, 0.8), rgba(0, 0, 0, 0.2)), url("../docs/fundo.png") no-repeat center center fixed;
+  background-size: cover;
+  padding: 2rem;
 }
 
 .cabecalho {
@@ -41,12 +41,13 @@ html,
 }
 
 .cabecalho-menu-item {
-  display: space-around;
+  display: flex;
   font-family: "Roboto", sans-serif;
   color: bisque;
   font-weight: 500;
   font-size: 1.125rem;
   justify-content: space-around;
+  flex: 0 30vh
 }
 
 .conteudo {
@@ -91,7 +92,6 @@ html,
 }
 
 .conteudo-principal-escrito-botao {
-  background-color: bisque;
   width: 6.25rem;
   height: 2.5rem;
   border: none;
@@ -104,12 +104,11 @@ html,
 }
 
 .conteudo-principal-escrito-botao:hover {
-  background-color: gray;
   color: cyan;
 }
 
 .video {
-  position: relative ;
+  position: relative;
   width: 100%;
   padding-bottom: 1%;
   height: 18.75rem;
@@ -120,6 +119,7 @@ html,
 }*/
 
 .conteudo-secundario {
+  padding-bottom: 1, 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,12 +143,19 @@ html,
   color: bisque;
 }
 
+.link-do-conteudo-secundario {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 1.25rem;
+  color: bisque;
+}
+
 .rodape {
-  height: 17rem;
+  height: 10rem;
 
   padding: 2rem;
-  border-top: 1px solid bisque;
-  background: none;
+  border-top: 2px solid bisque;
+  /*background: none;*/
   position: relative;
 
   display: flex;
@@ -156,6 +163,7 @@ html,
   align-items: center;
 }
 
+/*
 .rodape::after {
   content: "";
   position: absolute;
@@ -168,7 +176,7 @@ html,
   z-index: -2;
 
   background: linear-gradient(black, rgba(200, 200, 200, 0.4)),
-    url("../fundo.png") no-repeat center;
+    url("../docs/fundo.png") no-repeat center;
 
   background-size: cover;
 }
@@ -186,10 +194,10 @@ html,
 
   background: black;
   filter: opacity(0.8);
-}
+} */
 
 .rodape-imagem {
-  height: 12.5rem;
+  height: 8rem;
   display: block;
   margin: 0 auto;
 
