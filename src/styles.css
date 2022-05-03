@@ -1,5 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap");
 
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-gold: #c59d5f;
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +59,7 @@ html,
   width: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ff-secondary);
 }
 
 .imagem-fundo {
@@ -23,32 +68,150 @@ html,
   padding: 2rem;
 }
 
-.cabecalho {
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background: transparent;
+  box-shadow: var(--light-shadow);
+}
+
+.nav-header {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  padding: 1.5rem;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
-.cabecalho-imagem {
-  height: 4.5rem;
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-gold);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
 }
 
-.cabecalho-menu {
+.nav-toggle:hover {
+  color: var(--clr-primary-8);
+  transform: rotate(180deg);
+}
+
+.logo {
+  height: 50px;
+  padding-right: 107px;
+}
+
+.links a {
+  color: var(--clr-gold);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+
+.links a:hover {
+  background: linear-gradient(to right, rgba(84, 82, 82, 0.8), rgba(0, 0, 0, 0.2));
+  color: var(--clr-primary-5);
+  padding: 1rem 0 1rem 0;
+}
+
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.show-links {
+  height: 9rem;
+  text-align: center;
+}
+
+.icons a {
+  margin: 0 0.5rem;
+  color: var(--clr-gold);
+  transition: var(--transition);
+}
+
+.icons a:hover {
+  color: var(--clr-primary-5);
+}
+
+.icons {
+  height: 0;
+  overflow: hidden;
   display: flex;
-  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+  transition: var(--transition);
 }
 
-.cabecalho-menu-item {
-  display: flex;
-  font-family: "Roboto", sans-serif;
-  color: bisque;
-  font-weight: 500;
-  font-size: 1.125rem;
-  justify-content: space-around;
-  flex: 0 30vh
+.show-icons {
+  height: 2rem;
+  margin: auto;
 }
+
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .links {
+    height: auto;
+    display: flex;
+  }
+
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+
+  .icons {
+    height: auto;
+    display: flex;
+    width: auto;
+  }
+
+  .icons a {
+    margin: 0 0.5rem;
+
+    color: var(--clr-gold);
+    transition: var(--transition);
+
+  }
+
+  .icons a:hover {
+    color: var(--clr-primary-5);
+  }
+}
+
+/*====*/
 
 .conteudo {
   margin-bottom: 3rem;
