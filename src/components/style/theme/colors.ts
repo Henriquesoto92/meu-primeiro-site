@@ -26,11 +26,13 @@ export default {
         grey9: 'hsl(212, 33%, 89%)',
         grey10: 'hsl(210, 36%, 96%)',
         white: '#fff',
+
         reddark: 'hsl(360, 67%, 44%)',
         redlight: 'hsl(360, 71%, 66%)',
         greendark: 'hsl(125, 67%, 44%)',
         greenlight: 'hsl(125, 71%, 66%)',
         gold: '#c59d5f',
-        black: '#222',
+        black: "#27272A",
+        blackBackground: '#222',
     }
 }
