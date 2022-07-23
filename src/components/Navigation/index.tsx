@@ -29,9 +29,6 @@ const Navigation: React.FC = () => {
                         <Link to="/Contato">Contato</Link>
                     </li>
                 </S.Links>
-                <S.Icons>
-                    icones aqui
-                </S.Icons>
             </S.Nav>
             
         </>
