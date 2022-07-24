@@ -11,9 +11,7 @@ const Navigation: React.FC = () => {
         <>
             <S.Nav>
                 <S.Logo>
-                    <Link to="/">
-                        <img src={logo} alt="Logo"/>
-                    </Link>
+                    <h1>Programador aos 30</h1>
                 </S.Logo>
                 <S.Links>
                     <li>
