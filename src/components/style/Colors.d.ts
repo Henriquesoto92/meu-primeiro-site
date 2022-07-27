@@ -34,7 +34,11 @@ declare module 'styled-components'{
             greendark: string,
             greenlight: string,
             gold: string,
+            blue: string,
+            blue2: string,
             black: string,
+            black2: string,            
+            BlackBackground: string,
         }
     }
 }

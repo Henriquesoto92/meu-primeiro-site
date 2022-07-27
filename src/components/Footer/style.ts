@@ -8,10 +8,10 @@ export const footer = styled.footer `
     align-items: center;
     padding: 0 5em;
     color: ${props => props.theme.colors.white};
-    background: #232526;
-    background: -webkit-linear-gradient(to right, #414345, #232526);
-    background: linear-gradient(to right, #414345, #232526);
-    height: 300px;
+    background: ${props => props.theme.colors.black};
+    background: -webkit-linear-gradient(to left, ${props => props.theme.colors.black}, ${props => props.theme.colors.black2});
+    background: linear-gradient(to left, ${props => props.theme.colors.black}, ${props => props.theme.colors.black2});
+    height: 25vh;
 
     a{
         text-decoration: none;
@@ -68,8 +68,8 @@ export const socialMediaImgs = styled.div `
     }
 `
 
-export const socialMediaButton = styled.div `
-    h3{
+export const socialMediaButton = styled.button `
+
         cursor: pointer;
         width: 8rem;
         height: 2rem;
@@ -79,9 +79,8 @@ export const socialMediaButton = styled.div `
         padding: 5px;
         border-radius: 10px;
         transition: all 0.5s;
-    }
 
-    h3:hover{
+    :hover{
         background-color: ${props => props.theme.colors.white};
         color: black;
     }
@@ -94,9 +93,9 @@ export const direitos = styled.div `
     border-top: 2px solid ${props => props.theme.colors.gold};
     height: 50px;
     width: 100%;
-    background: #232526;
-    background: -webkit-linear-gradient(to right, #414345, #232526);
-    background: linear-gradient(to right, #414345, #232526);
+    background: ${props => props.theme.colors.black};
+    background: -webkit-linear-gradient(to left, ${props => props.theme.colors.black}, ${props => props.theme.colors.black2});
+    background: linear-gradient(to left, ${props => props.theme.colors.black}, ${props => props.theme.colors.black2});
 
     p{
         font-size: 20px;

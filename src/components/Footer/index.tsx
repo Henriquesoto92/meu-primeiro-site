@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                     </S.socialMediaImgs>
 
                     <S.socialMediaButton>
-                        <h3>Contato</h3>
+                        Contato
                     </S.socialMediaButton>
                 </S.socialMedia>
                 

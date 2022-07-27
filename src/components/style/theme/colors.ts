@@ -31,8 +31,11 @@ export default {
         redlight: 'hsl(360, 71%, 66%)',
         greendark: 'hsl(125, 67%, 44%)',
         greenlight: 'hsl(125, 71%, 66%)',
-        gold: '#c59d5f',
-        black: "#27272A",
+        gold: '#d49e51',
+        blue:'#00002a',
+        blue2:'#0a162e',
+        black: "#171720",
+        black2: "292930",
         blackBackground: '#222',
     }
 }
