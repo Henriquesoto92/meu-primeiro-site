@@ -38,7 +38,7 @@ export const Links = styled.ul `
         transform: scale(1.08);
     }
 
-    a{
+    a {
         text-decoration: none;
     }
 
