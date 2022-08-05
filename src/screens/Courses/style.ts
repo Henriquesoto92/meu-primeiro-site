@@ -19,7 +19,18 @@ export const Container = styled.div`
             > div{
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
                 border-radius: 10px;
-                height: 200px;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                >a {
+                    >img {
+                        height: 100px;
+                        border-bottom: 3px solid ${props => props.theme.colors.gold}
+                    }
+                }
+            
             }
         }
     }

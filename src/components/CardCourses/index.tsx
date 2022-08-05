@@ -12,8 +12,7 @@ import {
 interface Iprops {
     title: string;
     text: string;
-    imgSrc?: string;
-    imgAlt?: string;
+    imgSrc?: any;
     link: string;
     id: string;
 }
@@ -22,12 +21,16 @@ const CardCourses: React.FC <Iprops> = (props) => {
 
     return (
         <>
-            <Card id={props.id}>
-                <CardActionArea>
+            <Card 
+            id={props.id}
+            style={{height: '100%'}}
+            >
+                <CardActionArea href={props.link} target="_blank">
                     <CardMedia
                         component="img"
-                        alt={props.imgAlt}
+                        alt={props.title}
                         src={props.imgSrc}
+                        height="100px"                        
                     />
                     <CardContent>
                         <S.Title>{props.title}</S.Title>
@@ -38,7 +41,7 @@ const CardCourses: React.FC <Iprops> = (props) => {
                     <Button>
                         Compartilhar
                     </Button>
-                    <Button href={props.link}>
+                    <Button href={props.link} target="_blank">
                         Acessar
                     </Button>
                 </CardActions>

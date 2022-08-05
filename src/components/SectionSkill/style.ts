@@ -11,7 +11,7 @@ export const Header = styled.div `
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 100%;
 
     >div{
         width: 50%;

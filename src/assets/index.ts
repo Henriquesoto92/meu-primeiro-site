@@ -5,6 +5,8 @@ import foto from './foto.png';
 import foto1 from './foto1.png';
 import foto2 from './foto2.png';
 import foto3 from './foto3.png';
+import trilhaInfo from './trilhaInfo.png';
+
 
 export {
     logo,
@@ -14,4 +16,5 @@ export {
     foto1,
     foto2,
     foto3,
+    trilhaInfo,
 }

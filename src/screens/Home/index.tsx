@@ -1,15 +1,19 @@
 import React from 'react';
-import Header from '../../components/Header';
+import { 
+    Header,
+    AboutMe,
+    SectionSkill, 
+} from '../../components';
 import * as S from './style';  
 
 const Home: React.FC = () => {
 
     return (
-        <>
-            <S.Container>
-                <Header/>
-            </S.Container>
-        </>
+        <S.Container>
+            <Header/>
+            <AboutMe/>
+            <SectionSkill/>
+        </S.Container>
     )
 
 }

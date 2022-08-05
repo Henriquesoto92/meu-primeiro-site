@@ -1,26 +1,25 @@
 import React from 'react';
-import * as S from './style';  
-import { foto3} from '../../assets'
+import * as S from './style'; 
 
 
-const Header: React.FC = () => {
+const SectionSkill: React.FC = () => {
 
     return (
         <S.Header>
             <div>
-                <h2>Olá, me chamo </h2>
+                <h2>Quem eu Sou?</h2>
                 <h1>Henrique Soto</h1>
                 <h2><span></span> Sou o Programador Aos 30 e Desenvolvedor Front-End</h2>
                 <button>Conheça-me</button>
             </div>
-            <span>
-                <img src={foto3}/>
-                <div></div>                    
-            </span>
+            <div>
+                <h1>linguagem</h1>
+                <div>estrelas</div>                    
+            </div>
             
         </S.Header>
     )
 
 }
 
-export default Header
+export default SectionSkill
