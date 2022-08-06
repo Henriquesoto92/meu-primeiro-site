@@ -23,7 +23,7 @@ const StyledRating = styled(Rating)({
 
 const SkillCard: React.FC<Iprops> = (props) => {
     return (
-        <Grid item>
+        <Grid item xs={1} sm={1} md lg xl>
             <S.Container>
                 <p>{props.name}</p>
                 <StyledRating

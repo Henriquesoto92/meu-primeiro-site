@@ -87,6 +87,11 @@ export const Header = styled.div`
                 font-size: 2.5rem;
                 color: ${(props) => props.theme.colors.gold};
             }
+            > div {
+                width: 100%;
+                height: 100%;
+                gap: 20px;
+            }
         }
         > div:nth-child(3) {
             width: 100%;
@@ -99,7 +104,6 @@ export const Header = styled.div`
         }
 
         > div:nth-child(4) {
-
         }
         > span {
             width: 800px;
