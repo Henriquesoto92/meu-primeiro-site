@@ -1,96 +1,73 @@
 import React from "react";
-import SkillCard from "../SkillCard";
-// import { SkillsConst } from "../../constant";
-import { FaComments, FaJsSquare } from "react-icons/fa";
 import * as S from "./style";
+import SkillCard from "../SkillCard";
+import {
+  FaComments,
+  FaCss3Alt,
+  FaGitAlt,
+  FaGithubSquare,
+  FaHtml5,
+  FaJsSquare,
+  FaReact,
+} from "react-icons/fa";
+import { SiMaterialui } from "react-icons/si";
+import { Grid } from "@mui/material";
 
 const SectionSkillCard: React.FC = () => {
-    const SkillsConst = [
-        {
-            name: "HardSkills",
-            skill: [
-                {
-                    name: "JavaScript",
-                    level: 4,
-                    icon: <FaJsSquare fontSize="inherit" />,
-                },
-                {
-                    name: "React",
-                    level: 4,
-                    icon: <FaJsSquare fontSize="inherit" />,
-                },
-                {
-                    name: "React",
-                    level: 4,
-                    icon: <FaJsSquare fontSize="inherit" />,
-                },
-                {
-                    name: "React",
-                    level: 4,
-                    icon: <FaJsSquare fontSize="inherit" />,
-                },
-            ],
-        },
-        {
-            name: "SoftSkills",
-            skill: [
-                {
-                    name: "Comunicação",
-                    level: 4,
-                    icon: <FaComments fontSize="inherit" />,
-                },
-                {
-                    name: "trabalho em grupo",
-                    level: 4,
-                    icon: <FaComments fontSize="inherit" />,
-                },
-                {
-                    name: "trabalho em grupo",
-                    level: 4,
-                    icon: <FaComments fontSize="inherit" />,
-                },
-                {
-                    name: "trabalho em grupo",
-                    level: 4,
-                    icon: <FaComments fontSize="inherit" />,
-                },
-            ],
-        },
-    ];
+  const SkillsConst = [
+    {
+      name: "JavaScript",
+      icon: <FaJsSquare />,
+    },
+    {
+      name: "ReactJS",
+      icon: <FaReact />,
+    },
+    {
+      name: "HTML5",
+      icon: <FaHtml5 />,
+    },
+    {
+      name: "CSS3",
+      icon: <FaCss3Alt />,
+    },
+    {
+      name: "Material-Ui",
+      icon: <SiMaterialui />,
+    },
+    {
+      name: "GitHub",
+      icon: <FaGithubSquare />,
+    },
+    {
+      name: "Git",
+      icon: <FaGitAlt />,
+    },
+  ];
 
-    const MapSkill = ({ TypeSkill }: any) => {
-        return (
-            <>
-                {SkillsConst?.map((id: any, index: number) => {
-                    if (id.name === TypeSkill) {
-                        return (
-                            <>
-                                {id.skill?.map((e: any, index: number) => {
-                                    return (
-                                        <SkillCard
-                                            name={e.name}
-                                            level={e.level}
-                                            icon={e.icon}
-                                            key={index}
-                                        />
-                                    );
-                                })}
-                            </>
-                        );
-                    }
-                })}
-            </>
-        );
-    };
-
+  const MapSkill = () => {
     return (
-        <S.Container>
-            <h1>SoftSkills</h1>
-            <MapSkill TypeSkill="SoftSkills" />
-            <h1>HardSkills</h1>
-            <MapSkill TypeSkill="HardSkills" />
-        </S.Container>
+      <>
+        {SkillsConst?.map((e: any, index: number) => {
+          return <SkillCard name={e.name} icon={e.icon} key={index} />;
+        })}
+      </>
     );
+  };
+
+  return (
+    <S.Container>
+      <h3>HardSkills</h3>
+      <Grid
+        spacing={1}
+        zeroMinWidth={true}
+        container
+        justifyContent="space-between"
+      >
+        <MapSkill />
+      </Grid>
+    </S.Container>
+  );
 };
 
 export default SectionSkillCard;

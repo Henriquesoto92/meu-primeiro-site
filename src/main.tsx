@@ -8,23 +8,24 @@ import colors from "./components/style/theme/colors";
 import "./index.css";
 
 const BreakpointOverrides = createTheme({
-    breakpoints: {
-        values: {
-            xs: 400,
-            sm: 900,
-            md: 1200,
-            lg: 1600,
-            xl: 1920,
-        },
+  breakpoints: {
+    values: {
+      xs: 400,
+      sm: 900,
+      md: 1200,
+      lg: 1600,
+      xl: 1920,
     },
+  },
 });
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-    <React.StrictMode>
-        <MuiThemeProvider theme={BreakpointOverrides}></MuiThemeProvider>
-        <StyledThemeProvider theme={colors}>
-            <GlobalStyle />
-            <App />
-        </StyledThemeProvider>
-    </React.StrictMode>
+  <React.StrictMode>
+    <MuiThemeProvider theme={BreakpointOverrides}>
+      <StyledThemeProvider theme={colors}>
+        <GlobalStyle />
+        <App />
+      </StyledThemeProvider>
+    </MuiThemeProvider>
+  </React.StrictMode>
 );

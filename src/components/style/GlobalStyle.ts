@@ -1,6 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
-
 
 *{
     margin: 0;
@@ -46,4 +45,23 @@ img {
     pointer-events: none;
 }
 
-`
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+`;

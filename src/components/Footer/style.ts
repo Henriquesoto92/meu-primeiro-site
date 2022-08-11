@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Footer = styled.footer`
-    border-top: 2px solid ${(props) => props.theme.colors.gold};
+    border-top: 0.2rem solid ${(props) => props.theme.colors.gold};
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,18 +37,23 @@ export const Logo = styled.div`
     img {
         max-width: 11rem;
         border-radius: 50%;
-        border: 1px solid ${(props) => props.theme.colors.gold};
+        border: 0.1rem solid ${(props) => props.theme.colors.gold};
     }
 `;
 
 export const Inicio = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1rem;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 800;
+    }
 
     p {
         color: white;
-        font-size: 20px;
+        font-size: 1.5rem;
         transition: all 0.3s;
     }
 
@@ -59,16 +64,17 @@ export const Inicio = styled.div`
 `;
 
 export const SocialMedia = styled.div`
-    max-width: 12rem;
+    max-width: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 1rem;
 `;
 
 export const SocialMediaImgs = styled.div`
+    width: 100%;
     display: flex;
-    gap: 8px;
+    justify-content: space-between;
 
     svg {
         font-size: 2rem;
@@ -89,8 +95,8 @@ export const SocialMediaButton = styled.button`
     background-color: ${(props) => props.theme.colors.gold};
     color: ${(props) => props.theme.colors.grey2};
     text-align: center;
-    padding: 5px;
-    border-radius: 10px;
+    padding: 0.5rem;
+    border-radius: 1rem;
     transition: all 0.5s;
 
     :hover {
@@ -103,8 +109,8 @@ export const Direitos = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 2px solid ${(props) => props.theme.colors.gold};
-    height: 50px;
+    border-top: 0.2rem solid ${(props) => props.theme.colors.gold};
+    height: 5rem;
     width: 100%;
     background: ${(props) => props.theme.colors.black};
     background: -webkit-linear-gradient(
@@ -119,7 +125,7 @@ export const Direitos = styled.div`
     );
 
     p {
-        font-size: 20px;
+        font-size: 2rem;
         color: white;
     }
 `;

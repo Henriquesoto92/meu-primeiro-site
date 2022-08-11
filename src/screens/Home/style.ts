@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Container = styled.div `
+export const Container = styled.div`
     height: 100%;
-    width: 100vw;
-`
+    width: 100%;
+`;
