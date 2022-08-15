@@ -11,13 +11,16 @@ import {
 import { ButtonSpecial } from "../../components";
 import * as S from "./style";
 
+const data = [{ label: "name" }];
+
 const Contact: React.FC = () => {
   return (
     <S.Container>
+      <h1>Contato</h1>
       <div>
         <S.SocialMedia>
-          <h1>Contato</h1>
-          <div>Onde me encontrar</div>
+          <p>Onde me encontrar</p>
+          <h2>Redes Sociais</h2>
           <S.SocialMediaImgs>
             <a href="https://github.com/Henriquesoto92" target="_blank">
               <FaGithub />
@@ -42,47 +45,41 @@ const Contact: React.FC = () => {
             </a>
           </S.SocialMediaImgs>
         </S.SocialMedia>
+
+        <FormControl component={"form"}>
+          <TextForm label={"Nome"} />
+          <br />
+          <TextForm label={"E-mail"} />
+          <br />
+          <TextForm label={"Telefone"} />
+          <br />
+          <TextForm label={"Mensagem"} />
+          <br />
+          <ButtonSpecial
+            text="Entre em Contato"
+            link="https://www.linkedin.com/messaging/thread/new?recipients=List(urn%3Ali%3Afsd_profile%3AACoAAC4AoZcBp7ua_j2t9z-m31MXBeAE7GStCeI)&composeOptionType=PREMIUM_INMAIL&controlUrn=topcard_primary_compose_message_button&referringModuleKey=NON_SELF_PROFILE_VIEW&messageComposeFlowTrackingId=PgIDSq2jR%2FCrOAmWD03qHw%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B0BMH4EcOQVGhC1cl4AaRzw%3D%3D  "
+            height="3rem"
+            width="auto"
+          />
+          teste
+        </FormControl>
       </div>
-      <FormControl component={"form"}>
-        <TextField
-          id="Nome"
-          label="Nome"
-          multiline
-          sx={{ backgroundColor: "#fff" }}
-        />
-        <br />
-        <TextField
-          id="E-mail"
-          label="E-mail"
-          multiline
-          sx={{ backgroundColor: "#fff" }}
-        />
-        <br />
-        <TextField
-          id="Telefone"
-          label="Telefone"
-          multiline
-          sx={{
-            backgroundColor: "#fff",
-            borderRadius: "8px" ,
-          }}
-        />
-        <br />
-        <TextField
-          id="Mensagem"
-          label="Mensagem"
-          multiline
-          sx={{ height: "200px", backgroundColor: "#fff" }}
-        />
-        <br />
-        <ButtonSpecial
-          text="Entre em Contato"
-          link="https://www.linkedin.com/messaging/thread/new?recipients=List(urn%3Ali%3Afsd_profile%3AACoAAC4AoZcBp7ua_j2t9z-m31MXBeAE7GStCeI)&composeOptionType=PREMIUM_INMAIL&controlUrn=topcard_primary_compose_message_button&referringModuleKey=NON_SELF_PROFILE_VIEW&messageComposeFlowTrackingId=PgIDSq2jR%2FCrOAmWD03qHw%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B0BMH4EcOQVGhC1cl4AaRzw%3D%3D  "
-          height="3rem"
-          width="auto"
-        />
-      </FormControl>
     </S.Container>
+  );
+};
+
+interface TextFormProps {
+  label: string;
+}
+
+const TextForm = ({ label }: TextFormProps) => {
+  return (
+    <TextField
+      id={label}
+      label={label}
+      multiline
+      sx={{ backgroundColor: "#fff", borderRadius: "8px" }}
+    />
   );
 };
 
