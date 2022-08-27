@@ -24,8 +24,12 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     height: 100%;
+    background: #cfcfcf;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    gap: 2rem;
   }
 `;
 
@@ -36,7 +40,6 @@ export const SocialMedia = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-right: 200px;
 
   > p {
     font-size: 1.5rem;
@@ -64,4 +67,8 @@ export const SocialMediaImgs = styled.div`
     transform: scale(1.3);
     color: ${(props) => props.theme.colors.gold};
   }
+`;
+
+export const FormContainer = styled.form`
+  width: 100%;
 `;

@@ -1,6 +1,6 @@
 import { FormControl, TextField } from "@mui/material";
-import { Box } from "@mui/system";
-import React from "react";
+
+import React, { useEffect, useState } from "react";
 import {
   FaGithub,
   FaInstagram,
@@ -10,10 +10,30 @@ import {
 } from "react-icons/fa";
 import { ButtonSpecial } from "../../components";
 import * as S from "./style";
-
-const data = [{ label: "name" }];
+import { postForm, useGetDataForm } from "../../services/hooks/useForm";
 
 const Contact: React.FC = () => {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+
+  const useForm = useGetDataForm();
+  const mutation = postForm();
+
+  // useEffect(() => {
+  //   mutation.mutate({
+  //     name: "Henrique Soto",
+  //     email: "henriquesoto92@gmail.com",
+  //     phone: "51 99999-9999",
+  //     message: "lorem ipstum",
+  //   });
+  // }, []);
+
+  const teste = () => {
+    mutation.mutate({ name, email, phone, message });
+  };
+
   return (
     <S.Container>
       <h1>Contato</h1>
@@ -44,25 +64,57 @@ const Contact: React.FC = () => {
               <FaTwitch />
             </a>
           </S.SocialMediaImgs>
-        </S.SocialMedia>
-
-        <FormControl component={"form"}>
-          <TextForm label={"Nome"} />
-          <br />
-          <TextForm label={"E-mail"} />
-          <br />
-          <TextForm label={"Telefone"} />
-          <br />
-          <TextForm label={"Mensagem"} />
-          <br />
           <ButtonSpecial
-            text="Entre em Contato"
+            text="Chat no Linkedin"
             link="https://www.linkedin.com/messaging/thread/new?recipients=List(urn%3Ali%3Afsd_profile%3AACoAAC4AoZcBp7ua_j2t9z-m31MXBeAE7GStCeI)&composeOptionType=PREMIUM_INMAIL&controlUrn=topcard_primary_compose_message_button&referringModuleKey=NON_SELF_PROFILE_VIEW&messageComposeFlowTrackingId=PgIDSq2jR%2FCrOAmWD03qHw%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B0BMH4EcOQVGhC1cl4AaRzw%3D%3D  "
             height="3rem"
             width="auto"
           />
-          teste
-        </FormControl>
+        </S.SocialMedia>
+        <S.FormContainer
+          onSubmit={(e: React.FormEvent) => {
+            e.preventDefault();
+            teste();
+          }}
+        >
+          {/* onSubmit={} */}
+          <FormControl>
+            <TextForm
+              label="Nome"
+              type="text"
+              value={name}
+              onChange={(state: any) => setName(state.target.value)}
+            />
+            <br />
+            <TextForm
+              label="E-mail"
+              type="email"
+              value={email}
+              onChange={(state: any) => setEmail(state.target.value)}
+            />
+            <br />
+            <TextForm
+              label="Telefone"
+              type="text"
+              value={phone}
+              onChange={(state: any) => setPhone(state.target.value)}
+            />
+            <br />
+            <TextForm
+              label="Mensagem"
+              type="text"
+              value={message}
+              onChange={(state: any) => setMessage(state.target.value)}
+            />
+            <br />
+            <ButtonSpecial
+              text="Entre em Contato"
+              link="https://www.linkedin.com/messaging/thread/new?recipients=List(urn%3Ali%3Afsd_profile%3AACoAAC4AoZcBp7ua_j2t9z-m31MXBeAE7GStCeI)&composeOptionType=PREMIUM_INMAIL&controlUrn=topcard_primary_compose_message_button&referringModuleKey=NON_SELF_PROFILE_VIEW&messageComposeFlowTrackingId=PgIDSq2jR%2FCrOAmWD03qHw%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B0BMH4EcOQVGhC1cl4AaRzw%3D%3D  "
+              height="3rem"
+              width="auto"
+            />
+          </FormControl>
+        </S.FormContainer>
       </div>
     </S.Container>
   );
@@ -70,13 +122,20 @@ const Contact: React.FC = () => {
 
 interface TextFormProps {
   label: string;
+  type: string;
+  value: any;
+  onChange?: any;
 }
 
-const TextForm = ({ label }: TextFormProps) => {
+const TextForm = ({ label, type, value, onChange }: TextFormProps) => {
   return (
     <TextField
+      type={type}
       id={label}
       label={label}
+      value={value}
+      onChange={onChange}
+      required
       multiline
       sx={{ backgroundColor: "#fff", borderRadius: "8px" }}
     />

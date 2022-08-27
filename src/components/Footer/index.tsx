@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { logoWallpaper } from "../../assets";
+import { logoCompleto } from "../../assets";
 import {
   FaGithub,
   FaLinkedin,
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
       <div>
         <S.Logo>
           <Link to="/">
-            <img src={logoWallpaper} alt="Logo footer" />
+            <img src={logoCompleto} alt="Logo footer" />
           </Link>
         </S.Logo>
 

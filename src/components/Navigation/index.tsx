@@ -1,5 +1,5 @@
 import React from "react";
-import { logoWallpaper } from "../../assets";
+import { logoCompleto } from "../../assets";
 import * as S from "./style";
 import { Link } from "react-router-dom";
 
@@ -7,7 +7,7 @@ const Navigation: React.FC = () => {
   return (
     <>
       <S.Nav>
-        <img src={logoWallpaper} />
+        <img src={logoCompleto} />
         <S.Links>
           <li>
             <Link to="/">Home</Link>
